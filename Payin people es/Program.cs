@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace Payin_people_es
         {
             bool extra_paga = false;
             int n;
-            Console.WriteLine("Inserire il numero di consulenti");
+            Console.WriteLine("Insert the number of consultants");
             do
             {
 
@@ -22,7 +22,7 @@ namespace Payin_people_es
             //The name of the consultant is inserted
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"Inserire il nome del consolente (n°{i})");
+                Console.WriteLine($"Insert the number of consultant n°{i}");
                 nomi_consulenti[i] = Console.ReadLine();
             }
             //The pay for the consultant is inserted
@@ -30,7 +30,7 @@ namespace Payin_people_es
             {
                 do
                 {
-                    Console.WriteLine($"Inserire la paga del consolente {nomi_consulenti[i]}");
+                    Console.WriteLine($"Insert he pay of consultant {nomi_consulenti[i]}");
                 } while (!int.TryParse(Console.ReadLine(), out paga[i]));
             }
             //Get in the input how many weeks they worked
@@ -38,7 +38,7 @@ namespace Payin_people_es
             {
                 do
                 {
-                    Console.WriteLine($"Inserire quante settimane ha lavorato il consolente {nomi_consulenti[i]}");
+                    Console.WriteLine($"Insert how many weeks {nomi_consulenti[i]} worked");
                 } while (!int.TryParse(Console.ReadLine(), out settimane[i]));
             }
             //Checks if they had 4 weeks of work and gives extra cash if so
@@ -53,7 +53,7 @@ namespace Payin_people_es
                     extra_paga = true;
                     paga[i] += paga[i] / 2;
                 }
-                Console.WriteLine($"La paga di {nomi_consulenti[i]} è {paga[i]}");
+                Console.WriteLine($"The pay of {nomi_consulenti[i]} is {paga[i]}");
             }
 
             Console.ReadKey();
